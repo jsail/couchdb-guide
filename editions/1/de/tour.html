@@ -154,7 +154,7 @@ curl -X GET http://127.0.0.1:5984/_all_dbs
 
 <h3 id="welcome">Willkommen zu Futon</h3>
 
-<p>Nachdem wir die nackte HTTP Schnittstelle von CouchDB gesehen haben, gehen wir einen Schritt weiter zu Futon, der integrierten Administrationsanwendung. Futon bietet vollen Zugang zu sämtlichen Funktionen von CouchDB und macht es einfach mit den komplexeren Features von CouchDB zu experementieren. Mit Futon kann man Datenbanken anlegen und löschen, Dokumente anzeigen und bearbeiten, MapReduce Views erzeugen und ausführen als auch die Replikation zwischen Datenbanken anstoßen.
+<p>Nachdem wir die nackte HTTP Schnittstelle von CouchDB gesehen haben, gehen wir einen Schritt weiter zu Futon, der integrierten Administrationsanwendung. Futon bietet vollen Zugang zu sämtlichen Funktionen von CouchDB und macht es einfach mit den komplexeren Features von CouchDB zu experimentieren. Mit Futon kann man Datenbanken anlegen und löschen, Dokumente anzeigen und bearbeiten, MapReduce Views erzeugen und ausführen als auch die Replikation zwischen Datenbanken anstoßen.
 
 <p>Futon ist unter folgender URL zu erreichen:
 
@@ -213,7 +213,7 @@ http://127.0.0.1:5984/_utils/
 
 <p>Futon zeigt anschließend das neue Dokument an, welches nur aus den beiden Attributen <code>_id</code> und <code>_rev</code> besteht. Um ein weiteres Feld hinzuzufügen, klickt man auf „Add Field“ und gibt dem Feld einen Namen. Durch einen Doppelklick auf den Wert kann man ihn ändern.
 
-<p>CouchDB lehnt ungültiges JSON als Wert ab. Versucht man es, erhält man einen Fehler. CouchDB Werte müssen ein gültiger JSON Ausdruck sein. Streng genommen sollte Futon den Wert <code>world</code> als ungültig ablehnen, weil in JSON Strings in einfachen oder doppelten Anführungszeichen stehen müssen. Futon erkennt jedoch, dass wir einen String eingeben möchten und fügt die Anführungszeichen selber hinzu. Experementieren sie ein wenig mit anderen JSON Ausdrücken wie <code>[1, 2, "c"]</code> oder <code>{"foo":"bar"}</code>. Achten sie vor dem Speichern auf den Wert des <code>_rev</code> Attributes und klicken dann auf „Save Document“. Das Ergebnis sollte so ähnlich aussehen, wie in <a href="#figure/4">Abbildung 4: Ein „Hello World“ Dokument in Futon</a>.
+<p>CouchDB lehnt ungültiges JSON als Wert ab. Versucht man es, erhält man einen Fehler. CouchDB Werte müssen ein gültiger JSON Ausdruck sein. Streng genommen sollte Futon den Wert <code>world</code> als ungültig ablehnen, weil in JSON Strings in einfachen oder doppelten Anführungszeichen stehen müssen. Futon erkennt jedoch, dass wir einen String eingeben möchten und fügt die Anführungszeichen selber hinzu. Experimentieren sie ein wenig mit anderen JSON Ausdrücken wie <code>[1, 2, "c"]</code> oder <code>{"foo":"bar"}</code>. Achten sie vor dem Speichern auf den Wert des <code>_rev</code> Attributes und klicken dann auf „Save Document“. Das Ergebnis sollte so ähnlich aussehen, wie in <a href="#figure/4">Abbildung 4: Ein „Hello World“ Dokument in Futon</a>.
 
 <div class="figure" id="figure/3">
 
@@ -233,7 +233,7 @@ http://127.0.0.1:5984/_utils/
 
 <p>Wenn sie gut aufgepasst haben, ist ihnen aufgefallen, dass sich der Wert des <code>_rev</code> Attributs geändert hat. Wir werden auf die Bedeutung später noch genauer eingehen. Im Moment genügt es zu verstehen, dass das <code>_rev</code> Attribut ein Sicherheitsmechanismus beim Speichern von Dokumenten ist. So lange ihre Anwendung die gleiche Version des Dokuments speichern möchte, die CouchDB als die aktuelle Version betrachtet, können sie das Dokument speichern.
 
-<p>Futon erlaubt auch das Dokument in JSON Notation auszugeben, was jenach Art der Daten kompakter und einfacher zu lesen sein kann. Um die JSON Repräsentation unseres „Hello World“ Dokuments zu sehen, klicken sie auf den „Source“ Reiter. Das Ergebnis sollte ungefähr so aussehen wie in <a href="#figure/5">Abbildung 5: Der JSON Source eines „Hello World“ Dokuments in Futon</a>.
+<p>Futon erlaubt auch das Dokument in JSON Notation auszugeben, was je nach Art der Daten kompakter und einfacher zu lesen sein kann. Um die JSON Repräsentation unseres „Hello World“ Dokuments zu sehen, klicken sie auf den „Source“ Reiter. Das Ergebnis sollte ungefähr so aussehen wie in <a href="#figure/5">Abbildung 5: Der JSON Source eines „Hello World“ Dokuments in Futon</a>.
 
 
 <div class="figure" id="figure/5">
@@ -246,7 +246,7 @@ http://127.0.0.1:5984/_utils/
 
 <h3 id="mapreduce">Eine Abfrage mit MapReduce</h3>
 
-<p>Relationale Datenbanken erlauben, dass man jederzeit Abfragen gegen die Datenbank ausführen kann, solange die Daten orderntlich strukturiert sind. Im Gegensatz dazu verwendet CouchDB vordefinierte <em>map</em> und <em>reduce</em> Funktionen in einer Form, die man unter dem Begriff <em>MapReduce</em> kennt. Diese Funktionen erlauben eine große Flexibilität, denn sie können mit Variationen in der Struktur der Dokumente umgehen. Sie erlauben es auch, die Indizes für verschiedene Dokumente unabhängig voneinander und parallel zu berechnen. Die Kombination einer <em>map</em> und einer <em>reduce</em> Funktion nennt man in CouchDB eine <em>View</em>.
+<p>Relationale Datenbanken erlauben, dass man jederzeit Abfragen gegen die Datenbank ausführen kann, solange die Daten ordentlich strukturiert sind. Im Gegensatz dazu verwendet CouchDB vordefinierte <em>map</em> und <em>reduce</em> Funktionen in einer Form, die man unter dem Begriff <em>MapReduce</em> kennt. Diese Funktionen erlauben eine große Flexibilität, denn sie können mit Variationen in der Struktur der Dokumente umgehen. Sie erlauben es auch, die Indizes für verschiedene Dokumente unabhängig voneinander und parallel zu berechnen. Die Kombination einer <em>map</em> und einer <em>reduce</em> Funktion nennt man in CouchDB eine <em>View</em>.
 
 <div class="aside note">
 
@@ -409,6 +409,6 @@ function(doc) {
 
 <h3 id="wrap">Fassen wir zusammen</h3>
 
-<p>Nachdem wir die meisten der Features von Futon gesehen haben, sind wir für die kommenden Kapitel gerüstet, in denen wir die Daten genauer untersuchen und eine Beispiel Anwendung bauen werden. Futon ist vollständig in JavaScript geschrieben und zeigt das es möglich ist, nur mit dem HTTP API von CouchDB und dem integrierten Web Server eine vollständige Web Anwendung zu entwickeln.
+<p>Nachdem wir die meisten der Features von Futon gesehen haben, sind wir für die kommenden Kapitel gerüstet, in denen wir die Daten genauer untersuchen und eine Beispiel Anwendung bauen werden. Futon ist vollständig in JavaScript geschrieben und zeigt, dass es möglich ist, nur mit dem HTTP API von CouchDB und dem integrierten Web Server eine vollständige Web Anwendung zu entwickeln.
 
 <p>Doch als Nächstes werden wir das HTTP API von CouchDB genauer unter die Lupe nehmen. Ab auf die Couch zum Entspannen.
