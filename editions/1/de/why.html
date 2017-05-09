@@ -50,7 +50,7 @@ Apache CouchDB has started. Time to relax.
 
 </blockquote>
 
-<p>Das Design von CouchDB ist stark an bestehende Web Architekturen und den Konzepten von Resourcen, Methoden und Darstellungen angelehnt. Es kombiniert sie in mächtiger Weise um Daten zu suchen, abzubilden, zu kombinieren und zu filtern. Hinzu kommen Fehlertoleranz, extreme Skalierbarkeit und inkrementelle Replikation. Damit definiert CouchDB genau den Sweet Spot für dokumentenbasierte Datenbanken.
+<p>Das Design von CouchDB ist stark an bestehende Web Architekturen und den Konzepten von Ressourcen, Methoden und Darstellungen angelehnt. Es kombiniert sie in mächtiger Weise um Daten zu suchen, abzubilden, zu kombinieren und zu filtern. Hinzu kommen Fehlertoleranz, extreme Skalierbarkeit und inkrementelle Replikation. Damit definiert CouchDB genau den Sweet Spot für dokumentenbasierte Datenbanken.
 
 <h3 id="better">Ein besserer Ansatz für Anwendungen</h3>
 
@@ -70,13 +70,13 @@ Apache CouchDB has started. Time to relax.
 
 <p>Doch genau mit solchen Referenzen werden Daten in relationalen Datenbanken modelliert. Jede Rechnung wird als Zeile in einer Tabelle gespeichert. Diese Zeile verweist auf andere Zeilen in anderen Tabellen — eine für den Käufer, eine für den Verkäufer, eine für jedes Teil was verkauft wurde und noch mehr Zeilen, die wiederum die verkauften Teile genauer beschreiben. 
 
-<p>Damit soll der Wert von relationalen Modellen nicht geschmälert werden. Sie sind in vielen Anwendungen im Einsatz und haben sich aus verschiedenen Gründen als sehr nützlich erwiesen. Das vorangegange Beispiel soll zeigen, dass manche Modelle sich nicht so gut für die Daten der realen Welt eignen.
+<p>Damit soll der Wert von relationalen Modellen nicht geschmälert werden. Sie sind in vielen Anwendungen im Einsatz und haben sich aus verschiedenen Gründen als sehr nützlich erwiesen. Das vorangegangene Beispiel soll zeigen, dass manche Modelle sich nicht so gut für die Daten der realen Welt eignen.
 
 <p>Schauen wir auf eine einfache Adressdatenbank um einen anderen Ansatz zur Modellierung von Daten zu illustrieren. Dazu kann man sich einen Stapel Visitenkarten vorstellen. Genau wie das Beispiel mit der Rechnung enthält eine Visitenkarte alle wichtigen Informationen auf einen Blick. Wir nennen das „in sich abgeschlossene Daten“ und es ist ein wichtiges Konzept beim Verständnis von dokumentenbasierten Datenbanken wie CouchDB.
 
 <h4 id="information">Syntax und Semantik</h4>
 
-<p>Die meisten Visitenkarten enthalten ungefähr die gleichen Informationen: den Namen, vielleicht ein Firmenname und Kontaktinformationen. Obwohl die  Daten zwischen den einzelnen Karten differieren kann, ist doch das allgemeine Schema immer gleich und Menschen haben keine Schwierigkeiten damit Visitenkarten als solche zu erkennen. So gesehen kann man eine Visitenkarte als ein <em>reales Dokument</em> bezeichnen.
+<p>Die meisten Visitenkarten enthalten ungefähr die gleichen Informationen: den Namen, vielleicht ein Firmenname und Kontaktinformationen. Obwohl die  Daten zwischen den einzelnen Karten differieren können, ist doch das allgemeine Schema immer gleich und Menschen haben keine Schwierigkeiten damit Visitenkarten als solche zu erkennen. So gesehen kann man eine Visitenkarte als ein <em>reales Dokument</em> bezeichnen.
 
 <p>Jan hat vielleicht eine Telefonnummer aber keine FAX Nummer auf seiner Visitenkarte. Dagegen enthält die Karte von J. Chris beide Nummern. Jan muss das Fehlen einer FAX Nummer nicht umständlich und explizit durch „Fax: Nicht vorhanden“ ausdrücken. Durch einfaches Weglassen der FAX Nummer gibt er zu verstehen, dass er keins hat.
 
@@ -90,7 +90,7 @@ Apache CouchDB has started. Time to relax.
 
 <p>Ob ein System unglaublich schnell sein muss, Zuverlässigkeit aber nicht allzu wichtig ist (z.B. für Logging), oder ein System Schreiboperationen in zwei verschiedenen, geografisch getrennten Systemen garantieren muss und die damit verbundene höhere Antwortzeit akzeptabel ist — CouchDB erlaubt es solche Systeme zu bauen.
 
-<p>Meist gibt es viele Knöpfe an denen man drehen kann, um ein System zu optimieren. Doch hat der positive Effekt in der Regel auch unerwünschte Nebenwirkungen. Ein Beispiel ist das CAP Theorem, das im nächsten Kapiel ausführlicher behandelt wird. Andere Parameter, die Datenspeichersysteme in der Regel beeinflussen, werden in  <a href="#figure/2">Abbildung 2</a> und  <a href="#figure/3">Abbildung 3</a> gezeigt.
+<p>Meist gibt es viele Knöpfe an denen man drehen kann, um ein System zu optimieren. Doch hat der positive Effekt in der Regel auch unerwünschte Nebenwirkungen. Ein Beispiel ist das CAP Theorem, das im nächsten Kapitel ausführlicher behandelt wird. Andere Parameter, die Datenspeichersysteme in der Regel beeinflussen, werden in  <a href="#figure/2">Abbildung 2</a> und  <a href="#figure/3">Abbildung 3</a> gezeigt.
 
 <p>Reduziert man die Latenz eines Systems, so hat das Auswirkungen auf die Parallelität und den Durchsatz. Das gilt im übrigen nicht nur für Speichersysteme.
 
@@ -142,7 +142,7 @@ Apache CouchDB has started. Time to relax.
 
 </ol>
 
-<p>Bestehende Werkzeuge versuchen oft zu verstecken, dass es ein Netzwerk gibt und das eine oder alle der oben genannten Dinge für das aktuelle System nicht zutreffen. Das Ergebnis ist oft genug eine fatale Situation wenn Dinge letzendlich doch schief gehen. CouchDB versucht im Gegenteil gar nicht erst das Netzwerk zu abstrahieren, sondern Fehler vernünftig zu behandeln und den Administrator zu benachrichtigen, wenn das nicht möglich ist.
+<p>Bestehende Werkzeuge versuchen oft zu verstecken, dass es ein Netzwerk gibt und das eine oder alle der oben genannten Dinge für das aktuelle System nicht zutreffen. Das Ergebnis ist oft genug eine fatale Situation wenn Dinge letztendlich doch schief gehen. CouchDB versucht im Gegenteil gar nicht erst das Netzwerk zu abstrahieren, sondern Fehler vernünftig zu behandeln und den Administrator zu benachrichtigen, wenn das nicht möglich ist.
 
 <h3 id="local">Hauptsache Lokal</h3>
 
